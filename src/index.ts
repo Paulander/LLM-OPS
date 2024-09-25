@@ -24,10 +24,16 @@ try {
 }
 }
 
+//Main function. For now just dump vector embeddings to console. 
 async function main() {
-    const sampleText = 'Hello, this is a test.';
-    const embedding = await generateEmbedding(sampleText);
-    console.log('Embedding:', embedding);
+    const male = 'King, Man, Boy, Prince';
+    const embedding_male = await generateEmbedding(male);
+
+    const female = 'Queen, Woman, Girl, Princess';
+    const embedding_female = await generateEmbedding(female);
+
+    console.log('Embedding male:', embedding_male);
+    console.log('\n \n Embedding female:', embedding_female)
   }
   
 main();
